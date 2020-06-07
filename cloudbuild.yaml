@@ -7,3 +7,7 @@ steps:
 - id: "Run docker PS"
   name: 'gcr.io/cloud-builders/docker'
   args: ['ps']
+
+- id: "Run composer install"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec', '-t', 'app', 'composer', 'install']
