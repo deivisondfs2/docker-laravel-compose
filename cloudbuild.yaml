@@ -18,11 +18,11 @@ steps:
 
 - id: "Run key:generate"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['exec', '-t', 'app', 'php', '/var/www/artissan', 'key:generate']
+  args: ['exec', '-t', 'app', 'php', '/var/www/artisan', 'key:generate']
 
 - id: "Run migrations"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['exec', '-t', 'app', 'php', '/var/www/artissan', 'migrate']
+  args: ['exec', '-t', 'app', 'php', '/var/www/artisan', 'migrate']
 
 - id: "Run php-unit"
   name: 'gcr.io/cloud-builders/docker'
